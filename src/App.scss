@@ -1,0 +1,132 @@
+@import-normalize;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+body, html {
+  padding: 0;
+  margin: 0;
+
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.App {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  #form {
+    padding: 20px;
+
+    .search {
+      display: flex;
+
+      &-field {
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+  
+        &:hover, &:focus {
+          background-color: #eee;
+          border-radius: 5px;
+        }
+      }
+
+      &-button {
+        background-color: transparent;
+        background-image: url('/assets/icons/search-solid.svg');
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 45px;
+        width: 45px;
+        border: none;
+        margin-left: 5px;
+        padding: 0px;
+        outline: none;
+
+        &:hover {
+          background-color: #eee;
+          border-radius: 5px;
+        }
+
+        &:active {
+          background-color: #ddd;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .units {
+      margin: 5px 0;
+
+      button {
+        border: none;
+        font-size: 1rem;
+        background: none;
+        color: #bbb;
+        outline: none;
+        margin-right: 2px;
+
+        &:hover {
+          background-color: #eee;
+          border-radius: 5px;
+        }
+
+        &.active {
+          color: #000;
+          background-color: #eee;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  #weather {
+    position: relative;
+    
+    .weather-text {
+      display: inline-block;
+      height: 250px;
+      width: 50%;
+      margin-top: 30px;
+      padding: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top right;
+
+      .high-low {
+        font-size: 1rem;
+      }
+
+      .temp {
+        font-size: 4rem;
+        margin-top: 30px;
+        margin-bottom: 0px;
+      }
+
+      .description {
+        text-transform: capitalize;
+        margin: 0;
+      }
+    }
+
+    .map {
+      .leaflet-container {
+        height: 400px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+#error {
+  padding: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .App #weather .weather-text {
+    width: calc(100% - 40px);
+  }
+}
