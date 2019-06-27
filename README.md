@@ -1,4 +1,4 @@
-#OpenWeatherMap API Facade and UI
+# OpenWeatherMap API Facade and UI
 > by Matthew Fortier
 
 ### Getting Started
